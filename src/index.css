@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+@theme {
+  /* --- Brand palette --- */
+  --color-primary: #0057b8;
+  --color-primary-light: #1c6fd6;
+  --color-primary-dark: #003d82;
+  --color-navy: #001b3a;
+  --color-navy-light: #062a52;
+  --color-accent: #00c2ff;
+  --color-accent-soft: #7fe3ff;
+  --color-ink: #0b1b2b;
+  --color-slate: #4a5c70;
+  --color-slate-light: #8598ab;
+  --color-mist: #f2f7fc;
+  --color-line: #dbe6f2;
+
+  /* --- Type --- */
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* --- Shadows --- */
+  --shadow-glass: 0 8px 32px rgba(0, 31, 63, 0.12);
+  --shadow-card: 0 10px 40px rgba(0, 61, 130, 0.08);
+  --shadow-card-hover: 0 20px 55px rgba(0, 61, 130, 0.16);
+  --shadow-lift: 0 24px 60px rgba(0, 31, 63, 0.16);
+  --shadow-glow: 0 0 60px rgba(0, 194, 255, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.015em;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-navy);
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-light);
+  border-radius: 999px;
+}
+
+/* --- Reusable utility layer --- */
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .glass-light {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(219, 230, 242, 0.8);
+  }
+
+  .text-gradient {
+    background: linear-gradient(100deg, #ffffff 0%, var(--color-accent-soft) 55%, var(--color-accent) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .bg-grid-dark {
+    background-image:
+      linear-gradient(rgba(0, 87, 184, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 87, 184, 0.08) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  /* FULL-WIDTH SYSTEM — no max-width cap. Sections and their inner
+     content span the full viewport, with fluid responsive padding
+     instead of a boxed, centered column. */
+  .section-pad {
+    padding-top: clamp(72px, 10vw, 160px);
+    padding-bottom: clamp(72px, 10vw, 160px);
+  }
+
+  .container-full,
+  .edge {
+    width: 100%;
+    padding-left: clamp(20px, 5vw, 96px);
+    padding-right: clamp(20px, 5vw, 96px);
+  }
+
+  /* Only used to keep long paragraphs readable — never caps section width */
+  .prose-measure {
+    max-width: 62ch;
+  }
+
+  .kicker {
+    font-family: var(--font-body);
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+  }
+
+  .btn-shine {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-shine::after {
+    content: "";
+    position: absolute;
+    top: 0; left: -60%;
+    width: 40%; height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+  }
+  .btn-shine:hover::after { left: 130%; }
+}
+
+/* Sine-wave divider (signature motif) */
+@keyframes wave-flow {
+  to { stroke-dashoffset: -200; }
+}
+.wave-path {
+  stroke-dasharray: 8 10;
+  animation: wave-flow 5s linear infinite;
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+.float-anim { animation: float-y 6s ease-in-out infinite; }
+.float-anim-delay { animation: float-y 6s ease-in-out infinite; animation-delay: 1.4s; }
+.float-anim-delay-2 { animation: float-y 7s ease-in-out infinite; animation-delay: 2.4s; }
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee-scroll 32s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .wave-path, .float-anim, .float-anim-delay, .float-anim-delay-2, .marquee-track { animation: none; }
+}

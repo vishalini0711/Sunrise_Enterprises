@@ -1,0 +1,725 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Sunrise Enterprises — Company Catalogue</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Carlito', 'DejaVu Sans', sans-serif;
+    color: #0B1B2B;
+    -webkit-print-color-adjust: exact;
+  }
+  .page {
+    width: 210mm;
+    height: 297mm;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+  .heading {
+    font-family: 'Carlito', 'DejaVu Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: -0.01em;
+  }
+  .kicker {
+    font-size: 9pt;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .rule { height: 2px; background: #0057B8; }
+  .pad { padding: 18mm 16mm; }
+  .white { color: #ffffff; }
+  .muted { color: #4A5C70; }
+
+  /* --- shared header band used on interior pages --- */
+  .page-header {
+    padding: 14mm 16mm 8mm 16mm;
+    border-bottom: 1px solid #DBE6F2;
+  }
+  .page-header .kicker { color: #0057B8; }
+  .page-header h1 {
+    font-size: 26pt;
+    margin-top: 3mm;
+    color: #0B1B2B;
+  }
+  .page-num {
+    position: absolute;
+    bottom: 10mm;
+    right: 16mm;
+    font-size: 8pt;
+    color: #8598AB;
+  }
+  .footer-brand {
+    position: absolute;
+    bottom: 10mm;
+    left: 16mm;
+    font-size: 8pt;
+    color: #8598AB;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* --- reusable card --- */
+  .card {
+    border: 1px solid #DBE6F2;
+    border-radius: 3mm;
+    padding: 6mm;
+  }
+  .card-icon {
+    width: 11mm; height: 11mm;
+    border-radius: 2.4mm;
+    background: #E7F0FA;
+    color: #0057B8;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 12pt;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 — COVER ============ -->
+<div class="page" style="background: linear-gradient(160deg, #001B3A 0%, #003D82 55%, #062A52 100%);">
+  <div style="position:absolute; inset:0; background-image:
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 12mm 12mm;"></div>
+
+  <div style="position:absolute; top:-40mm; right:-40mm; width:160mm; height:160mm; border-radius:50%; background:rgba(0,194,255,0.16); filter:blur(2mm);"></div>
+
+  <!-- top brand mark -->
+  <div style="position:relative; padding:20mm 16mm 0 16mm;">
+    <div style="display:table;">
+      <div style="display:table-cell; width:14mm; height:14mm; border-radius:50%; text-align:center; vertical-align:middle; overflow:hidden;">
+        <img src="logo.png" style="width:14mm; height:14mm; object-fit:cover; border-radius:50%; display:block;" />
+      </div>
+      <div style="display:table-cell; padding-left:4mm; vertical-align:middle;">
+        <div class="white heading" style="font-size:12pt; letter-spacing:1px;">SUNRISE ENTERPRISES</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- main cover content -->
+  <div style="position:relative; padding: 60mm 16mm 0 16mm;">
+    <div class="kicker" style="color:#7FE3FF;">Company Profile &middot; 2026</div>
+    <h1 class="heading white" style="font-size:44pt; line-height:1.05; margin-top:6mm;">
+      Power Infrastructure<br/>Built to Carry<br/>the Load.
+    </h1>
+    <div class="rule" style="width:30mm; background:#00C2FF; margin-top:10mm;"></div>
+    <p class="white" style="font-size:12pt; opacity:0.75; margin-top:8mm; max-width:130mm; line-height:1.6;">
+      BIS approved manufacturer of EEL-2 distribution transformers &mdash;
+      repair, testing, commissioning and AMC services from our works in
+      Sindri, Dhanbad, Jharkhand.
+    </p>
+  </div>
+
+  <!-- bottom certification strip -->
+  <div style="position:absolute; bottom:0; left:0; right:0; padding: 10mm 16mm; background:rgba(255,255,255,0.06); border-top:1px solid rgba(255,255,255,0.14);">
+    <div style="display:table; width:100%;">
+      <div style="display:table-cell; width:25%; text-align:center;">
+        <div class="white" style="font-weight:bold; font-size:10pt;">MSME</div>
+        <div class="white" style="font-size:7.5pt; opacity:0.6;">Govt. of India</div>
+      </div>
+      <div style="display:table-cell; width:25%; text-align:center; border-left:1px solid rgba(255,255,255,0.15);">
+        <div class="white" style="font-weight:bold; font-size:10pt;">ISO 14001:2015</div>
+        <div class="white" style="font-size:7.5pt; opacity:0.6;">Environmental Mgmt.</div>
+      </div>
+      <div style="display:table-cell; width:25%; text-align:center; border-left:1px solid rgba(255,255,255,0.15);">
+        <div class="white" style="font-weight:bold; font-size:10pt;">BIS Approved</div>
+        <div class="white" style="font-size:7.5pt; opacity:0.6;">IS 2026 Tested</div>
+      </div>
+      <div style="display:table-cell; width:25%; text-align:center; border-left:1px solid rgba(255,255,255,0.15);">
+        <div class="white" style="font-weight:bold; font-size:10pt;">BEE 4 Star</div>
+        <div class="white" style="font-size:7.5pt; opacity:0.6;">Energy Rated</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PAGE 2 — ABOUT ============ -->
+<div class="page" style="background:#ffffff;">
+  <div class="page-header">
+    <div class="kicker">Since 2018</div>
+    <h1 class="heading">About Sunrise Enterprises</h1>
+  </div>
+
+  <div class="pad" style="padding-top:10mm;">
+    <div style="display:table; width:100%;">
+      <div style="display:table-cell; width:62%; vertical-align:top; padding-right:8mm;">
+        <p class="muted" style="font-size:10.5pt; line-height:1.85; margin-bottom:4mm;">
+          Sunrise Enterprises was founded in 2018 by P. K. Singh, an electrical
+          engineering graduate of BIT Sindri, after more than thirty years spent
+          commissioning high-voltage switchyards and running power distribution
+          for thermal plants, rolling mills, sponge iron units and pellet plants.
+        </p>
+        <p class="muted" style="font-size:10.5pt; line-height:1.85; margin-bottom:4mm;">
+          That field background shaped a deliberately small, hands-on setup: an
+          SSI unit built beside B.I.T Sindri with its own winding, drying and
+          testing lines, staffed by career transformer engineers and a younger
+          team of mechanical engineers who keep the manufacturing floor running.
+        </p>
+        <p class="muted" style="font-size:10.5pt; line-height:1.85;">
+          Rather than scale into a generic supplier, the firm has stayed focused
+          on one thing &mdash; distribution transformers, built or rebuilt
+          correctly the first time, with the paperwork and testing to prove it.
+        </p>
+      </div>
+      <div style="display:table-cell; width:38%; vertical-align:top;">
+        <div class="card" style="background:#F2F7FC;">
+          <div class="kicker" style="color:#0057B8; margin-bottom:4mm;">Firm Snapshot</div>
+          <div style="font-size:9.5pt; line-height:2.1;">
+            <div style="display:table; width:100%; border-bottom:1px dashed #DBE6F2; padding:1.5mm 0;">
+              <div style="display:table-cell; color:#8598AB;">Founded</div>
+              <div style="display:table-cell; text-align:right; font-weight:bold;">2018</div>
+            </div>
+            <div style="display:table; width:100%; border-bottom:1px dashed #DBE6F2; padding:1.5mm 0;">
+              <div style="display:table-cell; color:#8598AB;">Location</div>
+              <div style="display:table-cell; text-align:right; font-weight:bold;">Sindri, Dhanbad</div>
+            </div>
+            <div style="display:table; width:100%; border-bottom:1px dashed #DBE6F2; padding:1.5mm 0;">
+              <div style="display:table-cell; color:#8598AB;">Entity Type</div>
+              <div style="display:table-cell; text-align:right; font-weight:bold;">Partnership</div>
+            </div>
+            <div style="display:table; width:100%; padding:1.5mm 0;">
+              <div style="display:table-cell; color:#8598AB;">Reg. No.</div>
+              <div style="display:table-cell; text-align:right; font-weight:bold;">396/2018</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- stat row -->
+    <div style="display:table; width:100%; margin-top:14mm; border-top:1px solid #DBE6F2; border-bottom:1px solid #DBE6F2;">
+      <div style="display:table-cell; width:25%; text-align:center; padding:8mm 0; border-right:1px solid #DBE6F2;">
+        <div class="heading" style="font-size:20pt; color:#0057B8;">500 KVA</div>
+        <div style="font-size:8pt; color:#8598AB; text-transform:uppercase; letter-spacing:1px;">Manufactured</div>
+      </div>
+      <div style="display:table-cell; width:25%; text-align:center; padding:8mm 0; border-right:1px solid #DBE6F2;">
+        <div class="heading" style="font-size:20pt; color:#0057B8;">2000 KVA</div>
+        <div style="font-size:8pt; color:#8598AB; text-transform:uppercase; letter-spacing:1px;">Repaired</div>
+      </div>
+      <div style="display:table-cell; width:25%; text-align:center; padding:8mm 0; border-right:1px solid #DBE6F2;">
+        <div class="heading" style="font-size:20pt; color:#0057B8;">2.5 MVA</div>
+        <div style="font-size:8pt; color:#8598AB; text-transform:uppercase; letter-spacing:1px;">Oven Capacity</div>
+      </div>
+      <div style="display:table-cell; width:25%; text-align:center; padding:8mm 0;">
+        <div class="heading" style="font-size:20pt; color:#0057B8;">7 Ton</div>
+        <div style="font-size:8pt; color:#8598AB; text-transform:uppercase; letter-spacing:1px;">Loading Bay</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-brand">Sunrise Enterprises</div>
+  <div class="page-num">02</div>
+</div>
+
+<!-- ============ PAGE 3 — VISION & MISSION ============ -->
+<div class="page" style="background: linear-gradient(160deg, #001B3A 0%, #003D82 100%);">
+  <div style="padding: 22mm 16mm 0 16mm;">
+    <div class="kicker white" style="color:#7FE3FF;">Our Direction</div>
+    <h1 class="heading white" style="font-size:28pt; margin-top:3mm;">Vision &amp; Mission</h1>
+  </div>
+
+  <div style="padding: 16mm 16mm; display:table; width:100%; border-collapse:separate; border-spacing:0 8mm;">
+    <div style="display:table-row;">
+      <div style="display:table-cell; padding-bottom:8mm;">
+        <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.16); border-radius:4mm; padding:10mm;">
+          <div class="kicker" style="color:#00C2FF;">Mission</div>
+          <p class="white" style="font-size:13pt; line-height:1.7; margin-top:5mm;">
+            Respond fast, quote accurately, and deliver transformers that
+            don't come back for the wrong reasons.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div style="display:table-row;">
+      <div style="display:table-cell;">
+        <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.16); border-radius:4mm; padding:10mm;">
+          <div class="kicker" style="color:#00C2FF;">Vision</div>
+          <p class="white" style="font-size:13pt; line-height:1.7; margin-top:5mm;">
+            To be the transformer partner industrial buyers call first &mdash;
+            for a new unit, a rebuild, or a switchgear panel &mdash; because
+            the last one held up.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- values strip -->
+  <div style="padding: 4mm 16mm;">
+    <div class="kicker white" style="color:#7FE3FF; margin-bottom:6mm;">What Guides Us</div>
+    <div style="display:table; width:100%;">
+      <div style="display:table-cell; width:25%; padding-right:4mm;">
+        <div class="white heading" style="font-size:11pt;">Precision</div>
+        <div class="white" style="font-size:8.5pt; opacity:0.6; margin-top:2mm;">Tested to IS 2026, every time.</div>
+      </div>
+      <div style="display:table-cell; width:25%; padding-right:4mm;">
+        <div class="white heading" style="font-size:11pt;">Accountability</div>
+        <div class="white" style="font-size:8.5pt; opacity:0.6; margin-top:2mm;">Registered, GST-compliant, traceable.</div>
+      </div>
+      <div style="display:table-cell; width:25%; padding-right:4mm;">
+        <div class="white heading" style="font-size:11pt;">Responsiveness</div>
+        <div class="white" style="font-size:8.5pt; opacity:0.6; margin-top:2mm;">Field service without delay.</div>
+      </div>
+      <div style="display:table-cell; width:25%;">
+        <div class="white heading" style="font-size:11pt;">Craft</div>
+        <div class="white" style="font-size:8.5pt; opacity:0.6; margin-top:2mm;">Career transformer engineers.</div>
+      </div>
+    </div>
+  </div>
+  <div class="page-num" style="color:rgba(255,255,255,0.4);">03</div>
+</div>
+
+<!-- ============ PAGE 4 — PRODUCTS ============ -->
+<div class="page" style="background:#ffffff;">
+  <div class="page-header">
+    <div class="kicker" style="color:#0057B8;">Our Products</div>
+    <h1 class="heading">Manufactured, Repaired, Tested</h1>
+  </div>
+
+  <div class="pad" style="padding-top:10mm;">
+    <div style="display:table; width:100%; border-collapse:separate; border-spacing:4mm;">
+
+      <div style="display:table-row;">
+        <div style="display:table-cell; width:33.3%;">
+          <div class="card" style="height:38mm;">
+            <div class="kicker" style="color:#0057B8; font-size:7.5pt;">Manufacturing</div>
+            <div class="heading" style="font-size:10.5pt; margin-top:2mm;">EEL-2 Distribution Transformer</div>
+            <div class="muted" style="font-size:8.5pt; margin-top:2mm; line-height:1.5;">BIS-approved, up to 500 KVA, built to IS 2026.</div>
+          </div>
+        </div>
+        <div style="display:table-cell; width:33.3%;">
+          <div class="card" style="height:38mm;">
+            <div class="kicker" style="color:#0057B8; font-size:7.5pt;">Repair</div>
+            <div class="heading" style="font-size:10.5pt; margin-top:2mm;">Transformer Repair &amp; Rewinding</div>
+            <div class="muted" style="font-size:8.5pt; margin-top:2mm; line-height:1.5;">12-stage rebuild process, up to 2000 KVA.</div>
+          </div>
+        </div>
+        <div style="display:table-cell; width:33.3%;">
+          <div class="card" style="height:38mm;">
+            <div class="kicker" style="color:#0057B8; font-size:7.5pt;">Panels</div>
+            <div class="heading" style="font-size:10.5pt; margin-top:2mm;">LT Control Panel</div>
+            <div class="muted" style="font-size:8.5pt; margin-top:2mm; line-height:1.5;">Low-tension control and distribution panels.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:table-row;">
+        <div style="display:table-cell;">
+          <div class="card" style="height:38mm;">
+            <div class="kicker" style="color:#0057B8; font-size:7.5pt;">Panels</div>
+            <div class="heading" style="font-size:10.5pt; margin-top:2mm;">PCC Panel</div>
+            <div class="muted" style="font-size:8.5pt; margin-top:2mm; line-height:1.5;">Power Control Center for feeder control.</div>
+          </div>
+        </div>
+        <div style="display:table-cell;">
+          <div class="card" style="height:38mm;">
+            <div class="kicker" style="color:#0057B8; font-size:7.5pt;">Panels</div>
+            <div class="heading" style="font-size:10.5pt; margin-top:2mm;">MCC Panel</div>
+            <div class="muted" style="font-size:8.5pt; margin-top:2mm; line-height:1.5;">Motor Control Center for industrial loads.</div>
+          </div>
+        </div>
+        <div style="display:table-cell;">
+          <div class="card" style="height:38mm;">
+            <div class="kicker" style="color:#0057B8; font-size:7.5pt;">Panels</div>
+            <div class="heading" style="font-size:10.5pt; margin-top:2mm;">DG Panel</div>
+            <div class="muted" style="font-size:8.5pt; margin-top:2mm; line-height:1.5;">Diesel-generator standby power control.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:table-row;">
+        <div style="display:table-cell;">
+          <div class="card" style="height:38mm;">
+            <div class="kicker" style="color:#0057B8; font-size:7.5pt;">Panels</div>
+            <div class="heading" style="font-size:10.5pt; margin-top:2mm;">APFC Panel</div>
+            <div class="muted" style="font-size:8.5pt; margin-top:2mm; line-height:1.5;">Automatic power-factor correction.</div>
+          </div>
+        </div>
+        <div style="display:table-cell;">
+          <div class="card" style="height:38mm;">
+            <div class="kicker" style="color:#0057B8; font-size:7.5pt;">Panels</div>
+            <div class="heading" style="font-size:10.5pt; margin-top:2mm;">Transformer Testing Panel</div>
+            <div class="muted" style="font-size:8.5pt; margin-top:2mm; line-height:1.5;">Infrastructure behind our DVDF/HV test bay.</div>
+          </div>
+        </div>
+        <div style="display:table-cell;">
+          <div class="card" style="height:38mm;">
+            <div class="kicker" style="color:#0057B8; font-size:7.5pt;">Panels</div>
+            <div class="heading" style="font-size:10.5pt; margin-top:2mm;">DVDF Panel</div>
+            <div class="muted" style="font-size:8.5pt; margin-top:2mm; line-height:1.5;">Dynamic voltage-drop acceptance testing.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-brand">Sunrise Enterprises</div>
+  <div class="page-num">04</div>
+</div>
+
+<!-- ============ PAGE 5 — MANUFACTURING FACILITY ============ -->
+<div class="page" style="background:#ffffff;">
+  <div class="page-header">
+    <div class="kicker" style="color:#0057B8;">Our Setup</div>
+    <h1 class="heading">Manufacturing Facility</h1>
+  </div>
+
+  <div class="pad" style="padding-top:8mm;">
+    <div style="display:table; width:100%;">
+      <div style="display:table-cell; width:50%; vertical-align:top; padding-right:5mm;">
+        <div class="card" style="background:#F2F7FC; height:80mm;">
+          <div class="heading" style="font-size:12pt; color:#0057B8; margin-bottom:4mm;">Manufacturing</div>
+          <div style="font-size:8.8pt; line-height:2.05; color:#0B1B2B;">
+            &#8226; 7-tonne loading/unloading bay, direct road access<br/>
+            &#8226; Semi-automatic HV &amp; LV winding machines<br/>
+            &#8226; PID-controlled drying oven, rated to 2.5 MVA<br/>
+            &#8226; High-vacuum oil filtration plant<br/>
+            &#8226; Dedicated transformer oil storage tank<br/>
+            &#8226; Full tooling &amp; tackle inventory
+          </div>
+        </div>
+      </div>
+      <div style="display:table-cell; width:50%; vertical-align:top; padding-left:5mm;">
+        <div class="card" style="background:#F2F7FC; height:80mm;">
+          <div class="heading" style="font-size:12pt; color:#0057B8; margin-bottom:4mm;">Testing</div>
+          <div style="font-size:8.8pt; line-height:2.05; color:#0B1B2B;">
+            &#8226; Power analyzer<br/>
+            &#8226; Automatic turns-ratio meter<br/>
+            &#8226; DVDF &amp; HV test panel<br/>
+            &#8226; 5 KV insulation resistance tester<br/>
+            &#8226; Micro-ohm meter<br/>
+            &#8226; BDV tester, clamp meter, true RMS multimeter
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:10mm;">
+      <div class="heading" style="font-size:13pt; margin-bottom:2mm;">The Repair Process — Tank to Test</div>
+      <div class="muted" style="font-size:9pt; margin-bottom:6mm;">Twelve stages, the same sequence every time, ending in full IS 2026 testing.</div>
+
+      <div style="display:table; width:100%; border-collapse:separate; border-spacing:2mm 0;">
+        <div style="display:table-row;">
+          <div style="display:table-cell; width:8.33%; text-align:center; font-size:7pt; color:#8598AB;">01<br/><span style="color:#0B1B2B; font-size:6.6pt;">Detank</span></div>
+          <div style="display:table-cell; width:8.33%; text-align:center; font-size:7pt; color:#8598AB;">02<br/><span style="color:#0B1B2B; font-size:6.6pt;">JVR</span></div>
+          <div style="display:table-cell; width:8.33%; text-align:center; font-size:7pt; color:#8598AB;">03<br/><span style="color:#0B1B2B; font-size:6.6pt;">Rewind</span></div>
+          <div style="display:table-cell; width:8.33%; text-align:center; font-size:7pt; color:#8598AB;">04<br/><span style="color:#0B1B2B; font-size:6.6pt;">Core</span></div>
+          <div style="display:table-cell; width:8.33%; text-align:center; font-size:7pt; color:#8598AB;">05<br/><span style="color:#0B1B2B; font-size:6.6pt;">Insulate</span></div>
+          <div style="display:table-cell; width:8.33%; text-align:center; font-size:7pt; color:#8598AB;">06<br/><span style="color:#0B1B2B; font-size:6.6pt;">Overhaul</span></div>
+          <div style="display:table-cell; width:8.33%; text-align:center; font-size:7pt; color:#8598AB;">07<br/><span style="color:#0B1B2B; font-size:6.6pt;">Bushings</span></div>
+          <div style="display:table-cell; width:8.33%; text-align:center; font-size:7pt; color:#8598AB;">08<br/><span style="color:#0B1B2B; font-size:6.6pt;">Tap Switch</span></div>
+          <div style="display:table-cell; width:8.33%; text-align:center; font-size:7pt; color:#8598AB;">09<br/><span style="color:#0B1B2B; font-size:6.6pt;">Oil</span></div>
+          <div style="display:table-cell; width:8.33%; text-align:center; font-size:7pt; color:#8598AB;">10<br/><span style="color:#0B1B2B; font-size:6.6pt;">Oven</span></div>
+          <div style="display:table-cell; width:8.33%; text-align:center; font-size:7pt; color:#8598AB;">11<br/><span style="color:#0B1B2B; font-size:6.6pt;">Finish</span></div>
+          <div style="display:table-cell; width:8.33%; text-align:center; font-size:7pt; color:#8598AB;">12<br/><span style="color:#0B1B2B; font-size:6.6pt;">Test</span></div>
+        </div>
+      </div>
+      <div class="rule" style="margin-top:4mm;"></div>
+    </div>
+  </div>
+  <div class="footer-brand">Sunrise Enterprises</div>
+  <div class="page-num">05</div>
+</div>
+
+<!-- ============ PAGE 6 — QUALITY & CERTIFICATIONS ============ -->
+<div class="page" style="background: linear-gradient(180deg, #001B3A 0%, #003D82 100%);">
+  <div style="padding: 22mm 16mm 0 16mm;">
+    <div class="kicker white" style="color:#7FE3FF;">Quality Control</div>
+    <h1 class="heading white" style="font-size:28pt; margin-top:3mm;">Certified, Standard by Standard</h1>
+    <p class="white" style="font-size:10pt; opacity:0.7; margin-top:5mm; max-width:150mm; line-height:1.7;">
+      Raw materials are sourced from vetted suppliers, and every unit is
+      tested in-house across multiple electrical parameters before it's
+      cleared to leave the works.
+    </p>
+  </div>
+
+  <div class="pad" style="padding-top:10mm;">
+    <div style="display:table; width:100%; border-collapse:separate; border-spacing:4mm;">
+      <div style="display:table-row;">
+        <div style="display:table-cell; width:33.3%;">
+          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:3mm; padding:6mm; height:28mm;">
+            <div class="white heading" style="font-size:11pt;">IS 2026</div>
+            <div class="white" style="font-size:8pt; opacity:0.65; margin-top:2mm; line-height:1.5;">Core manufacturing &amp; test standard.</div>
+          </div>
+        </div>
+        <div style="display:table-cell; width:33.3%;">
+          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:3mm; padding:6mm; height:28mm;">
+            <div class="white heading" style="font-size:11pt;">IS 1180 (Pt.1):2014</div>
+            <div class="white" style="font-size:8pt; opacity:0.65; margin-top:2mm; line-height:1.5;">Level 2 energy-efficiency spec.</div>
+          </div>
+        </div>
+        <div style="display:table-cell; width:33.3%;">
+          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:3mm; padding:6mm; height:28mm;">
+            <div class="white heading" style="font-size:11pt;">BEE 4 Star</div>
+            <div class="white" style="font-size:8pt; opacity:0.65; margin-top:2mm; line-height:1.5;">Energy efficiency rating.</div>
+          </div>
+        </div>
+      </div>
+      <div style="display:table-row;">
+        <div style="display:table-cell;">
+          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:3mm; padding:6mm; height:28mm;">
+            <div class="white heading" style="font-size:11pt;">OHSAS 18001:2007</div>
+            <div class="white" style="font-size:8pt; opacity:0.65; margin-top:2mm; line-height:1.5;">Occupational health &amp; safety.</div>
+          </div>
+        </div>
+        <div style="display:table-cell;">
+          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:3mm; padding:6mm; height:28mm;">
+            <div class="white heading" style="font-size:11pt;">ISO 14001:2015</div>
+            <div class="white" style="font-size:8pt; opacity:0.65; margin-top:2mm; line-height:1.5;">Environmental management.</div>
+          </div>
+        </div>
+        <div style="display:table-cell;">
+          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:3mm; padding:6mm; height:28mm;">
+            <div class="white heading" style="font-size:11pt;">ISO 9001:2015</div>
+            <div class="white" style="font-size:8pt; opacity:0.65; margin-top:2mm; line-height:1.5;">Quality management system.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:14mm; background:rgba(0,194,255,0.1); border:1px solid rgba(0,194,255,0.25); border-radius:3mm; padding:8mm;">
+      <div class="kicker white" style="color:#00C2FF;">MSME Registered</div>
+      <p class="white" style="font-size:9.5pt; opacity:0.75; margin-top:3mm; line-height:1.6;">
+        Registered under the Ministry of MSME, Government of India, with a
+        valid Udyog Aadhaar (JH20A0023757) and GSTIN (20ADSFS5547F1ZW).
+      </p>
+    </div>
+  </div>
+  <div class="page-num" style="color:rgba(255,255,255,0.4);">06</div>
+</div>
+
+<!-- ============ PAGE 7 — INDUSTRIES SERVED ============ -->
+<div class="page" style="background:#ffffff;">
+  <div class="page-header">
+    <div class="kicker" style="color:#0057B8;">Industries Served</div>
+    <h1 class="heading">Heavy Industrial Power Distribution</h1>
+  </div>
+
+  <div class="pad" style="padding-top:10mm;">
+    <p class="muted" style="font-size:10pt; line-height:1.7; max-width:160mm; margin-bottom:10mm;">
+      Our founder's three decades of project execution span these sectors
+      &mdash; the same expertise now shapes every transformer we manufacture
+      and repair.
+    </p>
+
+    <div style="display:table; width:100%; border-collapse:separate; border-spacing:0 6mm;">
+      <div style="display:table-row;">
+        <div style="display:table-cell; width:8mm; vertical-align:top;">
+          <div style="width:7mm; height:7mm; border-radius:1.6mm; background:#E7F0FA;"></div>
+        </div>
+        <div style="display:table-cell; vertical-align:top; padding-left:5mm; border-bottom:1px solid #DBE6F2; padding-bottom:5mm;">
+          <div class="heading" style="font-size:11.5pt;">Thermal Power Plants</div>
+          <div class="muted" style="font-size:9pt; margin-top:1.5mm;">Execution experience in plant-level power distribution.</div>
+        </div>
+      </div>
+      <div style="display:table-row;">
+        <div style="display:table-cell; width:8mm; vertical-align:top;">
+          <div style="width:7mm; height:7mm; border-radius:1.6mm; background:#E7F0FA;"></div>
+        </div>
+        <div style="display:table-cell; vertical-align:top; padding-left:5mm; border-bottom:1px solid #DBE6F2; padding-bottom:5mm;">
+          <div class="heading" style="font-size:11.5pt;">HV Switchyards</div>
+          <div class="muted" style="font-size:9pt; margin-top:1.5mm;">Switchyard commissioning and distribution at high voltage.</div>
+        </div>
+      </div>
+      <div style="display:table-row;">
+        <div style="display:table-cell; width:8mm; vertical-align:top;">
+          <div style="width:7mm; height:7mm; border-radius:1.6mm; background:#E7F0FA;"></div>
+        </div>
+        <div style="display:table-cell; vertical-align:top; padding-left:5mm; border-bottom:1px solid #DBE6F2; padding-bottom:5mm;">
+          <div class="heading" style="font-size:11.5pt;">Rolling Mills</div>
+          <div class="muted" style="font-size:9pt; margin-top:1.5mm;">Power distribution for continuous rolling-mill operations.</div>
+        </div>
+      </div>
+      <div style="display:table-row;">
+        <div style="display:table-cell; width:8mm; vertical-align:top;">
+          <div style="width:7mm; height:7mm; border-radius:1.6mm; background:#E7F0FA;"></div>
+        </div>
+        <div style="display:table-cell; vertical-align:top; padding-left:5mm; border-bottom:1px solid #DBE6F2; padding-bottom:5mm;">
+          <div class="heading" style="font-size:11.5pt;">Sponge Iron Plants</div>
+          <div class="muted" style="font-size:9pt; margin-top:1.5mm;">Electrical distribution across sponge iron production lines.</div>
+        </div>
+      </div>
+      <div style="display:table-row;">
+        <div style="display:table-cell; width:8mm; vertical-align:top;">
+          <div style="width:7mm; height:7mm; border-radius:1.6mm; background:#E7F0FA;"></div>
+        </div>
+        <div style="display:table-cell; vertical-align:top; padding-left:5mm;">
+          <div class="heading" style="font-size:11.5pt;">Pellet Plants</div>
+          <div class="muted" style="font-size:9pt; margin-top:1.5mm;">Distribution project work within pellet plant facilities.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-brand">Sunrise Enterprises</div>
+  <div class="page-num">07</div>
+</div>
+
+<!-- ============ PAGE 8 — WHY CHOOSE US ============ -->
+<div class="page" style="background:#F2F7FC;">
+  <div class="page-header" style="border-bottom:1px solid #DBE6F2;">
+    <div class="kicker" style="color:#0057B8;">Why Choose Us</div>
+    <h1 class="heading">Four Reasons Buyers Come Back</h1>
+  </div>
+
+  <div class="pad" style="padding-top:10mm;">
+    <div style="display:table; width:100%; border-collapse:separate; border-spacing:0 6mm;">
+      <div style="display:table-row;">
+        <div style="display:table-cell;">
+          <div class="card" style="background:#ffffff; height:36mm;">
+            <div class="heading" style="font-size:12pt; color:#0057B8;">01 &nbsp; Field-Tested Leadership</div>
+            <div class="muted" style="font-size:9pt; margin-top:3mm; line-height:1.6;">
+              Three decades of HV switchyard and industrial power-distribution
+              experience sit behind every design decision.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display:table-row;">
+        <div style="display:table-cell;">
+          <div class="card" style="background:#ffffff; height:36mm;">
+            <div class="heading" style="font-size:12pt; color:#0057B8;">02 &nbsp; One Roof, Full Process</div>
+            <div class="muted" style="font-size:9pt; margin-top:3mm; line-height:1.6;">
+              Winding, oven-drying, oil filtration and electrical testing all
+              happen on our own floor &mdash; nothing outsourced mid-process.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display:table-row;">
+        <div style="display:table-cell;">
+          <div class="card" style="background:#ffffff; height:36mm;">
+            <div class="heading" style="font-size:12pt; color:#0057B8;">03 &nbsp; IS 2026 Verified</div>
+            <div class="muted" style="font-size:9pt; margin-top:3mm; line-height:1.6;">
+              Each transformer is tested against Bureau of Indian Standards
+              parameters before it's cleared for dispatch.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display:table-row;">
+        <div style="display:table-cell;">
+          <div class="card" style="background:#ffffff; height:36mm;">
+            <div class="heading" style="font-size:12pt; color:#0057B8;">04 &nbsp; Built to Be Rebuilt</div>
+            <div class="muted" style="font-size:9pt; margin-top:3mm; line-height:1.6;">
+              Our 12-stage repair line means a failed unit gets a second life
+              instead of a landfill trip.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-brand">Sunrise Enterprises</div>
+  <div class="page-num">08</div>
+</div>
+
+<!-- ============ PAGE 9 — CONTACT + QR ============ -->
+<div class="page" style="background:#ffffff;">
+  <div class="page-header">
+    <div class="kicker" style="color:#0057B8;">Get in Touch</div>
+    <h1 class="heading">Talk to the Works</h1>
+  </div>
+
+  <div class="pad" style="padding-top:10mm;">
+    <div style="display:table; width:100%;">
+      <div style="display:table-cell; width:60%; vertical-align:top; padding-right:8mm;">
+        <div style="margin-bottom:8mm;">
+          <div class="kicker" style="color:#8598AB; font-size:8pt;">Factory Address</div>
+          <div style="font-size:10.5pt; margin-top:2mm; line-height:1.6;">
+            S-4, SIRTDO, BIT Sindri Campus,<br/>
+            PO &ndash; Sindri Institute, Sindri,<br/>
+            Dhanbad &ndash; 828123, Jharkhand
+          </div>
+        </div>
+        <div style="margin-bottom:8mm;">
+          <div class="kicker" style="color:#8598AB; font-size:8pt;">Phone</div>
+          <div style="font-size:10.5pt; margin-top:2mm; line-height:1.7;">
+            +91-8770804337<br/>
+            +91-8982039267<br/>
+            +91-7974301505
+          </div>
+        </div>
+        <div>
+          <div class="kicker" style="color:#8598AB; font-size:8pt;">Email</div>
+          <div style="font-size:10.5pt; margin-top:2mm;">sunriseenterprises0618@gmail.com</div>
+        </div>
+      </div>
+
+      <div style="display:table-cell; width:40%; vertical-align:top;">
+        <div class="card" style="background:#F2F7FC; text-align:center; padding:8mm;">
+          <div class="kicker" style="color:#0057B8; font-size:8pt; margin-bottom:4mm;">Scan to Save Contact</div>
+          <!-- QR placeholder pattern -->
+          <svg width="100" height="100" viewBox="0 0 100 100" style="margin:0 auto; display:block;">
+            <rect width="100" height="100" fill="#ffffff" stroke="#DBE6F2"/>
+            <rect x="6" y="6" width="24" height="24" fill="#0B1B2B"/>
+            <rect x="12" y="12" width="12" height="12" fill="#ffffff"/>
+            <rect x="70" y="6" width="24" height="24" fill="#0B1B2B"/>
+            <rect x="76" y="12" width="12" height="12" fill="#ffffff"/>
+            <rect x="6" y="70" width="24" height="24" fill="#0B1B2B"/>
+            <rect x="12" y="76" width="12" height="12" fill="#ffffff"/>
+            <rect x="40" y="10" width="6" height="6" fill="#0B1B2B"/>
+            <rect x="50" y="10" width="6" height="6" fill="#0B1B2B"/>
+            <rect x="40" y="20" width="6" height="6" fill="#0B1B2B"/>
+            <rect x="60" y="40" width="6" height="6" fill="#0B1B2B"/>
+            <rect x="70" y="40" width="6" height="6" fill="#0B1B2B"/>
+            <rect x="40" y="50" width="6" height="6" fill="#0B1B2B"/>
+            <rect x="50" y="60" width="6" height="6" fill="#0B1B2B"/>
+            <rect x="60" y="60" width="6" height="6" fill="#0B1B2B"/>
+            <rect x="80" y="50" width="6" height="6" fill="#0B1B2B"/>
+            <rect x="40" y="80" width="6" height="6" fill="#0B1B2B"/>
+            <rect x="50" y="86" width="6" height="6" fill="#0B1B2B"/>
+            <rect x="70" y="80" width="6" height="6" fill="#0B1B2B"/>
+            <rect x="86" y="70" width="6" height="6" fill="#0B1B2B"/>
+          </svg>
+          <div class="muted" style="font-size:7.5pt; margin-top:4mm;">Placeholder &mdash; replace with a generated QR code linking to your site or vCard.</div>
+        </div>
+
+        <div style="margin-top:8mm; padding:6mm; border:1px solid #DBE6F2; border-radius:3mm;">
+          <div class="kicker" style="color:#8598AB; font-size:7.5pt;">GSTIN</div>
+          <div style="font-size:9.5pt; font-weight:bold; margin-top:1.5mm;">20ADSFS5547F1ZW</div>
+          <div class="kicker" style="color:#8598AB; font-size:7.5pt; margin-top:4mm;">Udyog Aadhaar</div>
+          <div style="font-size:9.5pt; font-weight:bold; margin-top:1.5mm;">JH20A0023757</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-brand">Sunrise Enterprises</div>
+  <div class="page-num">09</div>
+</div>
+
+<!-- ============ PAGE 10 — BACK COVER ============ -->
+<div class="page" style="background: linear-gradient(160deg, #001B3A 0%, #003D82 100%);">
+  <div style="position:absolute; inset:0; background-image:
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 12mm 12mm;"></div>
+
+  <div style="position:relative; height:100%; display:table; width:100%;">
+    <div style="display:table-cell; vertical-align:middle; text-align:center;">
+      <div style="display:inline-block; width:16mm; height:16mm; border-radius:50%; margin-bottom:6mm; overflow:hidden;">
+        <img src="logo.png" style="width:16mm; height:16mm; object-fit:cover; border-radius:50%; display:block;" />
+      </div>
+      <div class="white heading" style="font-size:20pt; letter-spacing:1px;">SUNRISE ENTERPRISES</div>
+      <div class="white" style="font-size:10pt; opacity:0.6; margin-top:3mm; letter-spacing:2px; text-transform:uppercase;">
+        BIS Approved Distribution Transformers
+      </div>
+      <div class="rule" style="width:20mm; background:#00C2FF; margin:8mm auto;"></div>
+      <div class="white" style="font-size:9pt; opacity:0.5;">
+        Sindri &middot; Dhanbad &middot; Jharkhand
+      </div>
+      <div class="white" style="font-size:8pt; opacity:0.4; margin-top:14mm;">
+        &copy; 2026 Sunrise Enterprises. All rights reserved.<br/>
+        Reg. No. 396/2018 &middot; GSTIN 20ADSFS5547F1ZW
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
