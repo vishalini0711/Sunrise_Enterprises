@@ -51,15 +51,19 @@ export default function Hero() {
       <div className="relative z-10 edge w-full pt-32 pb-16 grid lg:grid-cols-[1.15fr_0.85fr] gap-14 xl:gap-20 items-center flex-1">
         {/* Left copy */}
         <div>
-          <motion.span
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 kicker text-accent-soft mb-8"
-          >
-            <HiOutlineShieldCheck className="text-base" />
+        <motion.span
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="inline-flex items-center gap-2 glass rounded-full px-6 py-3 mb-8
+                    whitespace-nowrap w-fit max-w-full overflow-x-auto text-white"
+        >
+          <HiOutlineShieldCheck className="text-base flex-shrink-0" />
+
+          <span className="whitespace-nowrap text-white">
             BIS Approved Transformer Manufacturer &middot; {companyInfo.location}
-          </motion.span>
+          </span>
+        </motion.span>
 
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
