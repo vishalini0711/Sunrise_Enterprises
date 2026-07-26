@@ -29,6 +29,10 @@ const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+console.log("Service:", EMAILJS_SERVICE_ID);
+console.log("Template:", EMAILJS_TEMPLATE_ID);
+console.log("Public Key:", EMAILJS_PUBLIC_KEY);
+
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_RE = /^[+\d][\d\s-]{7,15}$/;
 
