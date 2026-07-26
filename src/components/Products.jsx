@@ -22,7 +22,7 @@ export default function Products() {
           <SectionHeading
             eyebrow="Our Products"
             title="Manufactured, repaired, tested — in-house."
-            description="Every product below is manufactured or repaired at our Sindri works and tested before it leaves the factory."
+            description="Every product below is manufactured and repaired at our Sindri works and tested before it leaves the factory."
           />
 
           <div className="flex flex-wrap gap-2">

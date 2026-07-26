@@ -29,20 +29,6 @@ export default function Footer() {
               {companyInfo.tagline} — manufacturing, repair, testing and AMC
               services from our works in Sindri, Dhanbad.
             </p>
-            <div className="flex items-center gap-3">
-              {socials.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  aria-label={s.label}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-9 h-9 rounded-full glass flex items-center justify-center text-white/80 hover:text-accent hover:border-accent/50 transition-colors"
-                >
-                  <s.icon className="text-sm" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Quick links */}

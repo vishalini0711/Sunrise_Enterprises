@@ -6,6 +6,8 @@
 // free for commercial use, no attribution required), served directly from
 // Unsplash's CDN. Swap any `img` field for your own photography at any time.
 
+import { label } from "framer-motion/client";
+
 const UNSPLASH = (id, w = 1600, q = 80) =>
   `https://images.unsplash.com/${id}?w=${w}&q=${q}&auto=format&fit=crop`;
 
@@ -54,10 +56,10 @@ export const navLinks = [
 ];
 
 export const heroStats = [
-  { value: 500, suffix: " KVA", label: "Manufactured up to" },
+  { value: 250, suffix: " KVA", label: "Manufactured up to" },
   { value: 2000, suffix: " KVA", label: "Repaired up to" },
-  { value: 2018, suffix: "", label: "Est. in Sindri" },
-  { value: 7, suffix: "T", label: "Loading capacity" },
+  { text: "Electrical Panels", label: "Electrical Panels" },
+  { value: 2018, label: "Est. in Sindri" },
 ];
 
 export const certificationBadges = [
@@ -71,7 +73,7 @@ export const certificationBadges = [
 // this section focuses on the founder, the firm's formation and its people.
 export const about = {
   eyebrow: "About Us",
-  headline: "Three decades of field experience, one workshop.",
+  headline: "Built to Perform. Designed to Last",
   history: [
     `Sunrise Enterprises was founded in 2018 by P. K. Singh, an electrical engineering graduate of BIT Sindri carrying more than three decades of hands-on experience in electrical and automation work.`,
     `That experience was built on live sites — high-voltage switchyards, thermal power plant commissioning, and power distribution inside rolling mills, sponge iron plants and pellet plants — before it was turned into a manufacturing business of its own.`,
@@ -88,7 +90,7 @@ export const about = {
     },
     {
       title: "One Roof, Full Lifecycle",
-      desc: "Winding, oven-drying, oil filtration and electrical testing all happen inside the same Sindri works — nothing is outsourced.",
+      desc: "Winding, oven-drying, tank fabrication, oil filtration and electrical testing all happen inside the same Sindri works — nothing is outsourced.",
     },
     {
       title: "Standards, Not Shortcuts",
@@ -106,7 +108,7 @@ export const about = {
 export const services = [
   {
     title: "New Transformer Manufacturing",
-    desc: "EEL-2 distribution transformers manufactured to order, up to 500 KVA, ready for BIS-standard commissioning.",
+    desc: "EEL-2 distribution transformers manufactured to order, up to 250 KVA, ready for BIS-standard commissioning.",
   },
   {
     title: "Repair & Remanufacturing",
@@ -122,7 +124,7 @@ export const services = [
   },
   {
     title: "Annual Maintenance Contracts",
-    desc: "Scheduled inspections that extend service life and catch faults before they cause downtime.",
+    desc: "Scheduled inspections that extend service life and catch faults before they cause breakdown.",
   },
   {
     title: "HV/LV Consultancy",
@@ -137,12 +139,12 @@ export const products = [
     id: "eel2-transformer",
     name: "EEL-2 Distribution Transformer",
     category: "Manufacturing",
-    desc: "Our core product line — oil-immersed distribution transformers built in-house up to 500 KVA and finished to IS 2026 tolerances.",
+    desc: "Our core product line — oil-immersed distribution transformers built in-house up to 250 KVA and finished to IS 2026 tolerances.",
     img: images.transformerUnit,
   },
   {
     id: "transformer-repair",
-    name: "Transformer Rebuild Program",
+    name: "Transformer Repair",
     category: "Repair",
     desc: "A structured rebuild covering rewinding, insulation, tanking and oil work for units up to 2000 KVA — see our 12-stage process below.",
     img: images.electricTransformerCloseup,
@@ -205,17 +207,19 @@ export const manufacturingFacilities = [
   "High-vacuum transformer oil filtration plant",
   "Dedicated transformer oil storage tank",
   "Full complement of tools & tackles for assembly work",
+  "Tank fabrication - Shearing machine, Bending machine, Power Press, Rolling machine"
 ];
 
 export const testingFacilities = [
   "Power analyzer",
   "Automatic turns ratio meter",
-  "Transformer test panel with DVDF & HV test capability",
+  "Transformer testing panel with DVDF & HV test capability",
   "5 KV insulation resistance tester",
   "Micro ohm meter",
   "BDV tester",
   "Clamp meter",
   "True RMS multimeter",
+  "Paint thickness gauge"
 ];
 
 export const repairProcess = [
@@ -228,9 +232,9 @@ export const repairProcess = [
   { step: "Bushings & Fittings", desc: "New bushings and metal fittings installed where needed." },
   { step: "Tap Changer Service", desc: "Tap switch assessed and serviced for reliable operation." },
   { step: "Oil Treatment", desc: "Oil replaced or filtered through our vacuum plant, based on condition." },
-  { step: "Oven Drying", desc: "Assembly dried in the PID-controlled oven before closing up." },
+  { step: "Oven Drying", desc: "CCA(Core Coil Assembly) dried in the PID-controlled oven before tanking." },
   { step: "Reassembly & Finish", desc: "Unit reassembled and repainted to a dispatch-ready standard." },
-  { step: "Final Testing", desc: "Complete electrical testing to IS 2026 before the unit leaves the works." },
+  { step: "Final Testing", desc: "Complete electrical testing to IS 2026 before the transformer leaves the works." },
 ];
 
 export const qualityStandards = [

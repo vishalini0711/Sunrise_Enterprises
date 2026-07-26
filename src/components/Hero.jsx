@@ -6,15 +6,28 @@ import useCountUp from "../hooks/useCountUp";
 import WaveDivider from "./WaveDivider";
 
 function StatItem({ stat }) {
+  if (stat.text) {
+    return (
+      <div className="flex flex-col items-start gap-1 border-l border-white/15 pl-5">
+        <span className="font-display text-2xl sm:text-3xl font-bold text-white leading-tight">
+          {stat.text}
+        </span>
+      </div>
+    );
+  }
+
   const [ref, value] = useCountUp(stat.value, 1800);
   const display = Number.isInteger(stat.value) ? value : value.toFixed(1);
+
   return (
     <div ref={ref} className="flex flex-col items-start gap-1 border-l border-white/15 pl-5">
       <span className="font-display text-3xl sm:text-4xl font-bold text-white tabular-nums">
         {display}
         <span className="text-accent">{stat.suffix}</span>
       </span>
-      <span className="text-xs sm:text-[13px] text-white/55 leading-snug">{stat.label}</span>
+      <span className="text-xs sm:text-[13px] text-white/55 leading-snug">
+        {stat.label}
+      </span>
     </div>
   );
 }
@@ -45,7 +58,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 kicker text-accent-soft mb-8"
           >
             <HiOutlineShieldCheck className="text-base" />
-            BIS Approved &middot; {companyInfo.location}
+            BIS Approved Transformer Manufacturer &middot; {companyInfo.location}
           </motion.span>
 
           <motion.h1
@@ -66,8 +79,8 @@ export default function Hero() {
             className="mt-7 text-base sm:text-lg text-white/70 prose-measure leading-relaxed"
           >
             We manufacture BIS-approved EEL-2 distribution transformers and
-            rebuild oil-cooled units up to 2000 KVA — engineered, tested and
-            dispatched from our own works in Sindri, Dhanbad.
+            rebuild oil-cooled transformers up to 2000 KVA — engineered, tested and
+            dispatched from our own works in Sindri, Dhanbad and Jharkhand.
           </motion.p>
 
           <motion.div
