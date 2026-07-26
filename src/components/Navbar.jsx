@@ -57,22 +57,25 @@ export default function Navbar() {
     >
       <div className="edge w-full flex items-center justify-between h-20 lg:h-24">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-3 group shrink-0">
+        <a
+            href="#home"
+            className="flex items-center gap-2 sm:gap-3 group shrink-0 min-w-0"
+          >
           <span
-            className={`flex items-center justify-center w-11 h-11 rounded-full border overflow-hidden transition-colors ${
+            className={`flex items-center justify-center w-12 h-12 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full border overflow-hidden transition-colors ${
               scrolled ? "border-primary/25 bg-white" : "border-white/40 bg-white/95"
             }`}
           >
             <img src={logo} alt="Sunrise Enterprises logo" className="w-full h-full object-cover" />
           </span>
-          <span className="flex flex-col leading-none">
-           <span
-              className={`font-display font-bold text-sm sm:text-lg tracking-tight transition-colors ${
-                scrolled ? "text-[var(--color-ink)]" : "text-white"
-              }`}
-            >
-              Sunrise Enterprises
-            </span>
+          <span className="flex flex-col leading-none min-w-0">
+          <span
+          className={`font-display font-bold text-lg sm:text-xl lg:text-2xl tracking-tight leading-none transition-colors ${
+            scrolled ? "text-[var(--color-ink)]" : "text-white"
+          }`}
+        >
+          Sunrise Enterprises
+        </span>
             <span
               className={`hidden sm:block text-[10px] tracking-[0.2em] uppercase mt-1 transition-colors ${
                 scrolled ? "text-slate-light" : "text-white/60"
