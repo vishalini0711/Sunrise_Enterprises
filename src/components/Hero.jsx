@@ -36,7 +36,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-[var(--color-navy)]"
+      className="relative min-h-screen flex flex-col justify-center overflow-x-hidden bg-[var(--color-navy)]"
     >
       <img
         src={images.heroTransformer}
@@ -48,19 +48,18 @@ export default function Hero() {
       <div className="absolute -top-40 -right-40 w-[560px] h-[560px] rounded-full bg-accent/20 blur-[130px]" />
       <div className="absolute bottom-0 -left-32 w-[420px] h-[420px] rounded-full bg-primary-light/25 blur-[130px]" />
 
-      <div className="relative z-10 edge w-full pt-32 pb-16 grid lg:grid-cols-[1.15fr_0.85fr] gap-14 xl:gap-20 items-center flex-1">
+      <div className="relative z-10 edge w-full pt-24 sm:pt-32 pb-16 grid lg:grid-cols-[1.15fr_0.85fr] gap-14 xl:gap-20 items-center flex-1">
         {/* Left copy */}
         <div>
         <motion.span
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 glass rounded-full px-6 py-3 mb-8
-                    whitespace-nowrap w-fit max-w-full overflow-x-auto text-white"
+         className="inline-flex flex-wrap sm:flex-nowrap items-center gap-2 glass rounded-2xl sm:rounded-full px-4 sm:px-6 py-3 mb-6 sm:mb-8 max-w-full text-white"
         >
           <HiOutlineShieldCheck className="text-base flex-shrink-0" />
 
-          <span className="whitespace-nowrap text-white">
+          <span className="text-white text-sm sm:text-base leading-snug">
             BIS Approved Transformer Manufacturer &middot; {companyInfo.location}
           </span>
         </motion.span>
@@ -69,7 +68,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-display font-bold text-[2.6rem] sm:text-6xl lg:text-[4.6rem] xl:text-[5.2rem] leading-[1.02] text-white"
+            className="font-display font-bold text-[2.2rem] sm:text-5xl lg:text-[4.6rem] xl:text-[5.2rem] leading-[1.08] sm:leading-[1.02] text-white"
           >
             Power infrastructure
             <br />
@@ -80,7 +79,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="mt-7 text-base sm:text-lg text-white/70 prose-measure leading-relaxed"
+            className="mt-6 sm:mt-7 max-w-xl text-base sm:text-lg text-white/70 leading-relaxed"
           >
             We manufacture BIS-approved EEL-2 distribution transformers and
             rebuild oil-cooled transformers up to 2000 KVA — engineered, tested and
@@ -91,18 +90,18 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-10 flex flex-wrap items-center gap-4"
+            className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4"
           >
             <a
               href="#products"
-              className="inline-flex items-center gap-2 bg-accent text-[var(--color-navy)] font-semibold rounded-full px-7 py-3.5 shadow-[var(--shadow-glow)] hover:brightness-105 hover:-translate-y-0.5 transition-all"
+              className="inline-flex w-full sm:w-auto justify-center items-center gap-2 bg-accent text-[var(--color-navy)] font-semibold rounded-full px-7 py-3.5 shadow-[var(--shadow-glow)] hover:brightness-105 hover:-translate-y-0.5 transition-all"
             >
               Explore Products
               <HiOutlineArrowRight />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 glass text-white font-semibold rounded-full px-7 py-3.5 hover:bg-white/15 transition-all"
+              className="inline-flex w-full sm:w-auto justify-center items-center gap-2 glass text-white font-semibold rounded-full px-7 py-3.5 hover:bg-white/15 transition-all"
             >
               Request a Quote
             </a>
@@ -112,7 +111,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-8 max-w-2xl"
+            className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 max-w-2xl"
           >
             {heroStats.map((stat) => (
               <StatItem key={stat.label} stat={stat} />
@@ -121,7 +120,7 @@ export default function Hero() {
         </div>
 
         {/* Right: transformer illustration + floating certification cards */}
-        <div className="relative hidden lg:block h-[520px]">
+        <div className="relative hidden lg:block h-[420px] xl:h-[520px]">
           <motion.div
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}

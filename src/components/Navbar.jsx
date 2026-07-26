@@ -65,16 +65,16 @@ export default function Navbar() {
           >
             <img src={logo} alt="Sunrise Enterprises logo" className="w-full h-full object-cover" />
           </span>
-          <span className="hidden sm:flex flex-col leading-none">
-            <span
-              className={`font-display font-bold text-lg tracking-tight transition-colors ${
+          <span className="flex flex-col leading-none">
+           <span
+              className={`font-display font-bold text-sm sm:text-lg tracking-tight transition-colors ${
                 scrolled ? "text-[var(--color-ink)]" : "text-white"
               }`}
             >
               Sunrise Enterprises
             </span>
             <span
-              className={`text-[10px] tracking-[0.2em] uppercase mt-1 transition-colors ${
+              className={`hidden sm:block text-[10px] tracking-[0.2em] uppercase mt-1 transition-colors ${
                 scrolled ? "text-slate-light" : "text-white/60"
               }`}
             >
