@@ -182,7 +182,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden glass-light border-t border-line overflow-hidden"
+            className="lg:hidden bg-white border-t border-line overflow-hidden"
           >
             <nav className="flex flex-col">
               {navLinks.map((link) => (
